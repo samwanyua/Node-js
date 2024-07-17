@@ -4,7 +4,8 @@ console.log(global);
 
  const os = require('os'); // how to import modules in node
  const path = require('path')
- const math = require('./math')
+//  const math = require('./math')
+const {add} = require('./math')
 
 
 
@@ -21,5 +22,4 @@ console.log(global);
 
  console.log(path.parse(__filename));
 
- console.log(math.add(43,23))
- 
+ console.log(add(43,23))
