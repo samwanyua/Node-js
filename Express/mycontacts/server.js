@@ -3,7 +3,7 @@ const dotenv = require('dotenv').config();
 
 const app = express(); // create an instance of Express application
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 app.listen(port, ()=> {
     console.log(`Server running on port ${port}`);
