@@ -1,5 +1,10 @@
 const http = require('http');
-const server = http.createServer(); // server is an event emmitter
+const server = http.createServer((request, response) => {
+    if(request.url === '/'){
+        response.write("Hello, my name is Sam and I am backend developer!")
+        response.end();
+    }
+}); // server is an event emmitter
 
 // handler
 server.on('connection', socket =>{
