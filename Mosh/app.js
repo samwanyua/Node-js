@@ -55,7 +55,17 @@ fs.readdir('./', function(err,files){
 const EventEmmitter = require('events') // EvenEmmitter is a class
 // create instance
 const emitter = new EventEmmitter();
-emitter.emit() // produce something
+
+// register an event listener
+emitter.on('messageLogged', function(){
+    console.log('Listener called')
+})
+
+// raise an event
+emitter.emit('messageLogged') // produce something
+
+
+
 
 
 
