@@ -1,14 +1,20 @@
-console.log(); // this is a global object
-setTimeout()
-clearTimeout()
-setInterval()
-clearInterval()
+// app.js - our main module
+// console.log(); // this is a global object
+// setTimeout()
+// clearTimeout()
+// setInterval()
+// clearInterval()
 
-window.console.log()
+// window.console.log()
 
 var message = 'Jump'; // added to global scope, accessed via global object
-var sayHello = (name) {
+var sayHello = (name) => {
     console.log('Hello ' + name);
 }
 
-window.sayHello("Wanyua")
+// window.sayHello("Wanyua")
+
+// Creating modules - every file is a module
+// variables and functions defines in that file or that module are scoped to that file
+
+console.log(module)
