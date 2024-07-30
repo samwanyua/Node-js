@@ -7,7 +7,9 @@
         console.log(message);
     }
 
-    module.exports.log = log; // exporting log function
-    module.exports.endPoint = url // exporting url variable
+    // module.exports.log = log; // exporting log function
+    // exports.log = log; // alternative way
+    module.exports = log;
+    // module.exports.endPoint = url // exporting url variable
 })
     
