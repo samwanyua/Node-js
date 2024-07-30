@@ -28,6 +28,21 @@ How Node works
     > Node.js relies heavily on events. The core idea is that the server should remain non-blocking and highly responsive by using an event-driven architecture. When an asynchronous operation completes, 
     an event is triggered, and the corresponding event handler (callback function) is called.
 
+How Node.js Works Step-by-Step:
+Initialization:
+
+When a Node.js application starts, it initializes the event loop, processes the provided script, and sets up I/O listeners.
+Event Loop:
+
+The event loop is the core mechanism in Node.js that processes asynchronous operations. It continuously checks the call stack and the event queue, handling tasks in various phases.
+Phases of the Event Loop:
+
+Timers Phase: Handles setTimeout and setInterval callbacks.
+Pending Callbacks Phase: Handles I/O callbacks deferred to the next loop iteration.
+Idle, Prepare Phase: Internal use, not typically relevant to application development.
+Poll Phase: Retrieves new I/O events, executing their callbacks.
+Check Phase: Executes setImmediate callbacks.
+Close Callbacks Phase: Executes close event callbacks (e.g., socket.on('close', ...)).
 
 
 
