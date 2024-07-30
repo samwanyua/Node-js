@@ -57,12 +57,15 @@ const EventEmmitter = require('events') // EvenEmmitter is a class
 const emitter = new EventEmmitter();
 
 // register an event listener
-emitter.on('messageLogged', function(){
-    console.log('Listener called')
+emitter.on('messageLogged', function(arg){
+    console.log('Listener called', arg)
 })
 
-// raise an event
-emitter.emit('messageLogged') // produce something
+// raise an event & event arguments
+emitter.emit('messageLogged', {id: 1, url: 'http://'}) // produce something
+
+
+
 
 
 
