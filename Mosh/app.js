@@ -20,11 +20,12 @@ var sayHello = (name) => {
 // console.log(module)
 
 // Loading modules
-const logger = require('./logger')
+const logger = require('./logger');
 // require('./subfolder/logger')
 // require('../parentfolder/logger') 
-console.log(logger)
-logger.log("You are doing great!")
+console.log(logger);
+logger.log("You are doing great!");
+
 
 
 
