@@ -15,3 +15,33 @@ chrome uses v8
 Node architecture
 - it follows an event-driven, non-blocking I/O model
 - the architecture is suitable for real-time application, microservices and other scenarios requiring high concurrency
+
+How Node works
+- Node.js works by leveraging an event-driven, non-blocking I/O model, which allows it to handle many concurrent connections efficiently
+- Single-Threaded Event Loop:
+    > Node.js operates on a single-threaded event loop model. This means that, unlike traditional server-side platforms which use multiple threads to handle concurrent connections, 
+     Node.js uses a single thread to handle all incoming requests.
+- Non-Blocking I/O:
+    > Node.js performs I/O operations (such as reading from or writing to a file, querying a database, or making network requests) asynchronously. Instead of waiting for an I/O operation to complete, 
+    Node.js moves on to handle other tasks, and the I/O operation continues in the background. When the I/O operation completes, it emits an event, and the corresponding callback function is executed.
+- Event-Driven Architecture:
+    > Node.js relies heavily on events. The core idea is that the server should remain non-blocking and highly responsive by using an event-driven architecture. When an asynchronous operation completes, 
+    an event is triggered, and the corresponding event handler (callback function) is called.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
