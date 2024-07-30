@@ -47,8 +47,12 @@ Close Callbacks Phase: Executes close event callbacks (e.g., socket.on('close', 
 Node applications are asynchronous by default
 Node is not suitable for CPU-intensive applications
 
-
-
+Core modules of Node
+- http -> used to create HTTP servers and clients
+- fs -> provides an API for interacting with the file system
+- path -> provide utilities for working with files and directory paths
+- os -> provide operating system related utility methods and properties
+- events -> provides an API for working with events and event emitters
 
 
 
