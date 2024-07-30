@@ -11,7 +11,7 @@ class Logger extends EventEmitter {
         console.log(message);
 
         // Raise an event & event arguments
-        this.emit('messageLogged', { id: 1, url: 'http://' }); // Corrected emit usage
+        this.emit('messageLogged', { id: 1, url: 'http://events' });
     }
 }
 
