@@ -50,6 +50,12 @@ fs.readdir('./', function(err,files){
     else console.log('Result', files)
 })
 
+// events module
+// event is a signal that something has happened in our application
+const EventEmmitter = require('events') // EvenEmmitter is a class
+// create instance
+const emitter = new EventEmmitter();
+
 
 
 
