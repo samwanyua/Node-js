@@ -44,6 +44,8 @@ Poll Phase: Retrieves new I/O events, executing their callbacks.
 Check Phase: Executes setImmediate callbacks.
 Close Callbacks Phase: Executes close event callbacks (e.g., socket.on('close', ...)).
 
+Node applications are asynchronous by default
+Node is not suitable for CPU-intensive applications
 
 
 
