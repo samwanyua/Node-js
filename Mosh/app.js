@@ -13,7 +13,7 @@ const server = http.createServer((request, response) => {
 
 // handler
 server.on('connection', socket =>{
-    console.log('New connection...')
+    console.log('New connections...')
 })
 
 
