@@ -57,7 +57,7 @@ const EventEmmitter = require('events') // EvenEmmitter is a class
 const emitter = new EventEmmitter();
 
 // register an event listener
-emitter.on('messageLogged', function(arg){
+emitter.on('messageLogged', (arg) => {
     console.log('Listener called', arg)
 })
 
