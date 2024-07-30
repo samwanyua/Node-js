@@ -1,0 +1,17 @@
+Node is a runtime environment for executing JS code on the server side
+
+Node js advantages:
+* Great for prototyping and agile development( methodology in software development that promotes flexibility, collaboration, and customer satisfaction through iterative and incremental delivery of software. )
+* super fast and scalable
+* JS everywhere
+* Cleaner and more consistent codebase
+* large ecosystem of open-source libs
+
+js code ==> js engine ==> machine code
+microsoft edge uses chakra js engine
+firefox uses spidermonkey
+chrome uses v8
+
+Node architecture
+- it follows an event-driven, non-blocking I/O model
+- the architecture is suitable for real-time application, microservices and other scenarios requiring high concurrency
