@@ -54,15 +54,19 @@ fs.readdir('./', function(err,files){
 // event is a signal that something has happened in our application
 const EventEmmitter = require('events') // EvenEmmitter is a class
 // create instance
-const emitter = new EventEmmitter();
+// const emitter = new EventEmmitter();
+
+
+
+const Logger = require('./logger');
+const newLogger = new Logger();
 
 // register an event listener
-emitter.on('messageLogged', (arg) => {
-    console.log('Listener called', arg)
-})
+newLogger.on('messageLogged', (arg) => {
+    console.log('Listener called', arg);
+});
+newLogger.log('message');
 
-const log = require('./logger')
-log('message')
 
 
 
