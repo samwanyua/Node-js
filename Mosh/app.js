@@ -26,10 +26,19 @@ const logger = require('./logger');
 console.log(logger);
 logger.log("You are doing great!");
 
+// path module
 const path = require('path');
 
 let pathObject = path.parse(__filename);
 console.log(pathObject)
+
+// os module
+const os = require('os')
+const freeMem = os.freemem()
+const totalMemory= os.totalmem()
+console.log(freeMem)
+console.log(os.totalmem)
+
 
 
 
