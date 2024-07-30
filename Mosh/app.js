@@ -1,78 +1,23 @@
-// app.js - our main module
-// console.log(); // this is a global object
-// setTimeout()
-// clearTimeout()
-// setInterval()
-// clearInterval()
+const http = require('http');
+const server = http.createServer((request, response) => {
+    if(request.url === '/'){
+        response.write("Hello, my name is Sam and I am backend developer!")
+        response.end();
+    }
 
-// window.console.log()
+    if(request.url === '/api/v1/projects'){
+        response.write(JSON.stringify(['Fuzu android app', 'Fuzu ios app', 'Fuzu Web app']))
+        response.end()
+    }
+}); // server is an event emmitter
 
-var message = 'Jump'; // added to global scope, accessed via global object
-var sayHello = (name) => {
-    console.log('Hello ' + name);
-}
-
-// window.sayHello("Wanyua")
-
-// Creating modules - every file is a module
-// variables and functions defines in that file or that module are scoped to that file
-
-// console.log(module)
-
-// Loading modules
-const logger = require('./logger');
-// require('./subfolder/logger')
-// require('../parentfolder/logger') 
-console.log(logger);
-// logger.log("You are doing great!");
-
-// path module
-const path = require('path');
-
-let pathObject = path.parse(__filename);
-console.log(pathObject)
-
-// os module
-const os = require('os')
-const freeMem = os.freemem()
-const totalMemory= os.totalmem()
-console.log(`Free memory: ${freeMem}`)
-console.log(`Total memory: ${totalMemory}`)
-
-// file system module
-const fs = require('fs')
-const files = fs.readdirSync('./')
-console.log(files)
- 
-// asynchronous method
-fs.readdir('./', function(err,files){
-    if(err) console.log('Error', err)
-    else console.log('Result', files)
+// handler
+server.on('connection', socket =>{
+    console.log('New connections...')
 })
 
-// events module
-// event is a signal that something has happened in our application
-const EventEmmitter = require('events') // EvenEmmitter is a class
-// create instance
-// const emitter = new EventEmmitter();
 
+server.listen(3000);
 
-
-const Logger = require('./logger');
-const newLogger = new Logger();
-
-// register an event listener
-newLogger.on('messageLogged', (arg) => {
-    console.log('Listener called', arg);
-});
-
-newLogger.log('message');
-
-
-
-
-
-
-
-
+console.log('Listening on port 3000...');
 
