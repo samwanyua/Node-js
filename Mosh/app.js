@@ -37,7 +37,7 @@ const os = require('os')
 const freeMem = os.freemem()
 const totalMemory= os.totalmem()
 console.log(freeMem)
-console.log(totalMemory)
+console.log(`Total memory: ${totalMemory}`)
  
 
 
