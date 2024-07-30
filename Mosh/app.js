@@ -38,6 +38,11 @@ const freeMem = os.freemem()
 const totalMemory= os.totalmem()
 console.log(`Free memory: ${freeMem}`)
 console.log(`Total memory: ${totalMemory}`)
+
+// file system module
+const fs = require('fs')
+const files = fs.readdirSync('./')
+console.log(files)
  
 
 
