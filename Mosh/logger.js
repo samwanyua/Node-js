@@ -1,26 +1,21 @@
-console.log(__filename) // filename 
-console.log(__dirname) // directory path
+console.log(__filename); // filename 
+console.log(__dirname); // directory path
 
-const EventEmmitter = require('events') // EvenEmmitter is a class
+const EventEmitter = require('events'); // Correct spelling of EventEmitter
 
-var url = 'http://mylogger.io/log'
+const url = 'http://mylogger.io/log'; // This variable is not used but correctly defined
 
-class Logger extends EventEmmitter{
-    log(message){ // function inside a class is called a method
-        // send a HTTP request
+class Logger extends EventEmitter {
+    log(message) { // Function inside a class is called a method
+        // Send a HTTP request (simulated with console.log)
         console.log(message);
-    
-        // raise an event & event arguments
-        this.emitter.emit('messageLogged', {id: 1, url: 'http://'}) // produce something
-    
-    
-    }log
+
+        // Raise an event & event arguments
+        this.emit('messageLogged', { id: 1, url: 'http://' }); // Corrected emit usage
+    }
 }
 
-
-
-// module.exports.log = log; // exporting log function
-// exports.log = log; // alternative way
-module.exports = Logger; // exporting Logger class
-// module.exports.endPoint = url // exporting url variable
-    
+// Exporting Logger class
+module.exports = Logger;
+// Optionally export additional variables
+// module.exports.endPoint = url;

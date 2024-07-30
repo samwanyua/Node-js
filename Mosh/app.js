@@ -65,6 +65,7 @@ const newLogger = new Logger();
 newLogger.on('messageLogged', (arg) => {
     console.log('Listener called', arg);
 });
+
 newLogger.log('message');
 
 
