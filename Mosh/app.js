@@ -17,4 +17,14 @@ var sayHello = (name) => {
 // Creating modules - every file is a module
 // variables and functions defines in that file or that module are scoped to that file
 
-console.log(module)
+// console.log(module)
+
+// Loading modules
+const logger = require('./logger')
+// require('./subfolder/logger')
+// require('../parentfolder/logger') 
+console.log(logger)
+logger.log("You are doing great!")
+
+
+
