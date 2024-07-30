@@ -1,5 +1,1 @@
-const sayHello = (name) => {
-    console.log('Hello ' + name);
-}
-
-sayHello("Wanyua")
+console.log(); // this is a global object
