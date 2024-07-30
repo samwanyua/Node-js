@@ -1,0 +1,10 @@
+const express = require('express')
+const dotenv = require('dotenv').config();
+
+const app = express(); // create an instance of Express application
+
+const port = process.env.PORT;
+
+app.listen(port, ()=> {
+    console.log(`Server running on port ${port}`);
+})
