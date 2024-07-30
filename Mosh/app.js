@@ -55,7 +55,7 @@ fs.readdir('./', function(err,files){
 const EventEmmitter = require('events') // EvenEmmitter is a class
 // create instance
 const emitter = new EventEmmitter();
-
+emitter.emit() // produce something
 
 
 
