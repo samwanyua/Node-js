@@ -24,7 +24,7 @@ const logger = require('./logger');
 // require('./subfolder/logger')
 // require('../parentfolder/logger') 
 console.log(logger);
-logger.log("You are doing great!");
+// logger.log("You are doing great!");
 
 // path module
 const path = require('path');
@@ -61,9 +61,8 @@ emitter.on('messageLogged', (arg) => {
     console.log('Listener called', arg)
 })
 
-// raise an event & event arguments
-emitter.emit('messageLogged', {id: 1, url: 'http://'}) // produce something
-
+const log = require('./logger')
+log('message')
 
 
 
