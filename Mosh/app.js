@@ -26,6 +26,11 @@ const logger = require('./logger');
 console.log(logger);
 logger.log("You are doing great!");
 
+const path = require('path');
+
+let pathObject = path.parse(__filename);
+console.log(pathObject)
+
 
 
 
