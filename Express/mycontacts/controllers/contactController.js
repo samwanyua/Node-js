@@ -9,7 +9,7 @@ const getContacts = (req,res) =>{
 //@route GET /api/v1/contact/:id
 //@access public
 const getContact = (req,res) =>{
-    res.status(200).json({message: `Get a single contact for ${req.param.id}`});
+    res.status(200).json({message: `Get a single contact for ${req.params.id}`});
 }
 
 
@@ -24,14 +24,14 @@ const createContact = (req,res) =>{
 //@route PUT /api/v1/contact/:id
 //@access public
 const updateContact = (req,res) =>{
-    res.status(200).json({message: `Update a single contact for ${req.param.id}`});
+    res.status(200).json({message: `Update a single contact for ${req.params.id}`});
 }
 
 //@desc Create new contact
 //@route DELETE /api/v1/contacts
 //@access public
 const deleteContact = (req,res) =>{
-    res.status(200).json({message: `Delete a single contact for ${req.param.id}`});
+    res.status(200).json({message: `Delete a single contact for ${req.params.id}`});
 }
 
 
