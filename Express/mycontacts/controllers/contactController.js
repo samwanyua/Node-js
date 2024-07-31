@@ -1,8 +1,17 @@
 //@desc Get all contacts
-//@route Get /api/v1/contacts
+//@route GET /api/v1/contacts
 //@access public
 const getContact = (req,res) =>{
     res.status(200).json({message: "Get all contacts"});
 }
 
-module.exports = {getContact}
+//@desc Create new contact
+//@route POST /api/v1/contacts
+//@access public
+const createContact = (req,res) =>{
+    res.status(210).json({message: "Create new contact"});
+}
+
+
+
+module.exports = {getContact, createContact}
