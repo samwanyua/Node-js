@@ -7,7 +7,7 @@ router.route("/").get((req,res)=>{
 
 router.route("/:id").get((req,res)=>{
     res.status(200).json({message: `Get contact for ${req.params.id}`});
-
+})
 
 router.route("/").post((req,res)=>{
     res.status(200).json({message: "Create contact"});
@@ -22,4 +22,4 @@ router.route("/:id").delete((req,res)=>{
 });
 
 
-module.exports = router;
+module.exports = router
