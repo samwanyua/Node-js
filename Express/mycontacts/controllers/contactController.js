@@ -17,7 +17,7 @@ const getContact = (req,res) =>{
 //@route POST /api/v1/contacts
 //@access public
 const createContact = (req,res) =>{
-    res.status(201).json({message: `create a single contact for ${req.param.id}`});
+    res.status(201).json({message: `create a single contact`});
 }
 
 //@desc Update a contact
