@@ -12,17 +12,6 @@ const port = process.env.PORT || 5001
 // routes
 app.use('/api/products', productRoute)
 
-
-
-
-
-
-// updating a product
-app.put('/api/products/:id', );
-
-// delete a product
-app.delete('/api/products/:id', )
-
 // connecting to the database
 mongoose.connect("mongodb+srv://samexample8:S6w66d4vVyz0xStd@backend.nwoboto.mongodb.net/?retryWrites=true&w=majority&appName=Backend")
 .then(()=> {
