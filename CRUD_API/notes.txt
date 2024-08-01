@@ -1,0 +1,16 @@
+Model-View-Controller(MVC)
+- used to develop user interface that divide the application to 3 interconnected components:
+    * Model
+    * View
+    * Controller
+- This helps in organizing the code and making it more maintainable and scalable
+Model:
+- rep. data and business logic of the application
+- interacts with the database
+View:
+- rep. the UI of the application -> html templates, JSON responses
+Controller:
+- Handles user input and interacts with the model to fetch or updates data then selects a view to render the UI
+
+
+  
