@@ -1,5 +1,6 @@
 import express from "express";
-import { PORT } from "./config.js";
+import { PORT, MONGODB_URI } from "./config.js";
+import mongoose from "mongoose";
 
 const app = express();
 
@@ -8,7 +9,20 @@ app.get('/', (req, res)=>{
     return res.status(200).json({message: "Welcome to MERN stack!"})
 })
 
-app.listen(PORT, ()=>{
-    console.log(`App is listening to port: ${PORT}`)
-})
 
+
+// connect to mongodb
+mongoose
+    .connect(MONGODB_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      })
+    .then(()=>{
+        console.log("App is connected to database");
+        app.listen(PORT, ()=>{
+            console.log(`App is listening to port: ${PORT}`)
+        })
+    })
+    .catch((error)=> {
+        console.log(error);
+    })
