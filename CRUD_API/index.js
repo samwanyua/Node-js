@@ -11,8 +11,12 @@ app.get('/', (req, res)=> {
 });
 
 app.post('/api/products', (req, res) => {
-    console.log(req.body);
-    res.send(req.body)
+    try{
+
+    } catch(error){
+        res.status(500).json({message: error.message});
+    }
+
 });
 
 // connecting to the database
