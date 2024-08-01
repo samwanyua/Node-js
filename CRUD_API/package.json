@@ -5,10 +5,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node index.js"
-
   },
   "keywords": [],
   "author": "wanyua",
   "license": "ISC",
-  "description": "CRUD API"
+  "description": "CRUD API",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
