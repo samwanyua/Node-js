@@ -33,6 +33,18 @@ app.post('/api/v1/books', async(req,res)=>{
     }
 })
 
+// Get all books
+app.get('/api/v1/books', async(req,res)=>{
+    try {
+        const books = await Book.find({});
+        res.status(200).json(books);
+
+        
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+})
+
 // Connect to MongoDB
 mongoose
   .connect(MONGODB_URI)
