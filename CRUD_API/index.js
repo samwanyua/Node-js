@@ -5,6 +5,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 const mongoose = require('mongoose')
 const Product = require('./models/product.model.js')
+const productRoute = require('./routes/products.routes.js')
 
 const port = process.env.PORT || 5001
 
