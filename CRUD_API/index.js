@@ -8,10 +8,9 @@ const Product = require('./models/product.model.js')
 
 const port = process.env.PORT || 5001
 
+// routes
+app.use('/api/products')
 
-app.get('/', (req, res)=> {
-    res.send("Hello, from Node API ..");
-});
 
 // get all products
 app.get('/api/products', async (req, res) =>{
