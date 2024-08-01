@@ -21,7 +21,7 @@ const getProduct =  async (req, res) =>{
     }
 }
 
-const createProduct =  async (req, res) => {
+const postProduct =  async (req, res) => {
     try{
         const product = await Product.create(req.body)
         res.status(201).json(product)
@@ -32,7 +32,7 @@ const createProduct =  async (req, res) => {
 
 }
 
-const updatedproduct = async(req, res) => {
+const updateproduct = async(req, res) => {
     try {
         const {id} = req.params;
         const product = await Product.findByIdAndUpdate(id, req.body);
@@ -67,7 +67,7 @@ const deleteProduct = async(req,res)=>{
 module.exports = {
     getProducts,
     getProduct,
-    createProduct,
-    updatedproduct,
+    postProduct,
+    updateproduct,
     deleteProduct
 }
