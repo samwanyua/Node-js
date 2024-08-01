@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+app.use(express.json());
 const mongoose = require('mongoose')
 
 const port = process.env.PORT || 5001
@@ -7,6 +8,11 @@ const port = process.env.PORT || 5001
 
 app.get('/', (req, res)=> {
     res.send("Hello, from Node API ..");
+});
+
+app.post('/api/products', (req, res) => {
+    console.log(req.body);
+    res.send(req.body)
 });
 
 // connecting to the database
