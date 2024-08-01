@@ -1,4 +1,6 @@
 import dotenv from 'dotenv'
+
+// Load environment variables from .env file
 dotenv.config();
 
 export const PORT = 5555;
