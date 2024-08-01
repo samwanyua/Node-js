@@ -55,6 +55,27 @@ app.get('/api/v1/books/:id', async(req,res)=>{
     } catch (error) {
         res.status(500).json({message: error.message});
     }
+});
+
+// update a book
+app.put('/api/v1/books/:id', async(req, res)=>{
+    try {
+        if(!req.body.title || !req.body.author || !req.body.publishYear){
+            res.status(400).json({message: "Send all required fields ie. title, author and publishYear"})
+        }
+        
+        const {id} = req.params;
+        const result = await Book.findByIdAndUpdate(id, req.body);
+        if(!result){
+            return res.status(404).json({message: "Book not found"})
+        }
+
+        const updatedBook = await Book.findById(id);
+        return res.status(200).json(updatedBook);
+
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
 })
 
 // Connect to MongoDB
