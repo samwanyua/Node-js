@@ -11,6 +11,7 @@ app.get('/', (req, res)=> {
     res.send("Hello, from Node API ..");
 });
 
+// get all products
 app.get('/api/products', async (req, res) =>{
     try {
         const products = await Product.find({});
@@ -32,6 +33,7 @@ app.get('/api/products/:id', async (req, res) =>{
     }
 })
 
+// Create a product
 app.post('/api/products', async (req, res) => {
     try{
         const product = await Product.create(req.body)
