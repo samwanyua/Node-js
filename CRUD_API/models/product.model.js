@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const ProductScheme = mongoose.Schema({
+const ProductSchema = mongoose.Schema({
     name: {
         type: String,
         required: [true, "Please enter product name"],
@@ -24,3 +24,6 @@ const ProductScheme = mongoose.Schema({
         timestamps: true
     }
 );
+
+const Product = mongoose.model("Product", ProductSchema);
+module.exports = Product;
