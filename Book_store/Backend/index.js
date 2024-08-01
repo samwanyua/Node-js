@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from "express";
 import { PORT, MONGODB_URI } from "./config.js";
 import mongoose from "mongoose";
@@ -13,10 +16,7 @@ app.get('/', (req, res)=>{
 
 // connect to mongodb
 mongoose
-    .connect(MONGODB_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      })
+    .connect(MONGODB_URI)
     .then(()=>{
         console.log("App is connected to database");
         app.listen(PORT, ()=>{
