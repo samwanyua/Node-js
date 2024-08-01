@@ -32,10 +32,7 @@ app.post('/api/v1/books', async(req,res)=>{
 
 // Connect to MongoDB
 mongoose
-  .connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(MONGODB_URI)
   .then(() => {
     console.log("App is connected to the database");
     app.listen(PORT, () => {
