@@ -43,6 +43,18 @@ app.get('/api/v1/books', async(req,res)=>{
     } catch (error) {
         res.status(500).json({message: error.message});
     }
+});
+
+// Get an individual book
+app.get('/api/v1/books/:id', async(req,res)=>{
+    try {
+        const {id} = req.params;
+        const book = await Book.findById(id);
+        res.status(200).json(book);
+        
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
 })
 
 // Connect to MongoDB
