@@ -21,3 +21,5 @@ const bookSchema = mongoose.Schema(
         timestamps: true,
     }
 );
+
+export const Book = mongoose.model('Book', bookSchema)
