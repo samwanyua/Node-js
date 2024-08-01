@@ -32,7 +32,7 @@ const postProduct =  async (req, res) => {
 
 }
 
-const updateproduct = async(req, res) => {
+const updateProduct = async(req, res) => {
     try {
         const {id} = req.params;
         const product = await Product.findByIdAndUpdate(id, req.body);
@@ -68,6 +68,6 @@ module.exports = {
     getProducts,
     getProduct,
     postProduct,
-    updateproduct,
+    updateProduct,
     deleteProduct
 }
